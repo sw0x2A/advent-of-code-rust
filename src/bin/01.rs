@@ -22,7 +22,7 @@ L1
 L99
 R14
 L82
-"; // TODO: Add the test input
+";
 
 fn main() -> Result<()> {
     start_day(DAY);
@@ -49,7 +49,6 @@ fn main() -> Result<()> {
         Ok(count)
     }
 
-    // TODO: Set the expected answer for the test input
     assert_eq!(3, part1(BufReader::new(TEST.as_bytes()))?);
 
     let input_file = BufReader::new(File::open(INPUT_FILE)?);
