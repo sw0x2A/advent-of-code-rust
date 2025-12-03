@@ -36,7 +36,7 @@ fn main() -> Result<()> {
         let mut count = 0;
         for line in reader.lines().map_while(Result::ok) {
             let (dir, dist) = line.split_at(1);
-            let dist: i32 = dist.parse().unwrap();
+            let dist: i32 = dist.parse()?;
             match dir {
                 "L" => dial = (dial + 100 - dist) % 100,
                 "R" => dial = (dial + dist) % 100,
@@ -65,7 +65,7 @@ fn main() -> Result<()> {
         let mut count = 0;
         for line in reader.lines().map_while(Result::ok) {
             let (dir, dist) = line.split_at(1);
-            let dist: i32 = dist.parse().unwrap();
+            let dist: i32 = dist.parse()?;
             match dir {
                 "L" => {
                     for _ in 0..dist {

@@ -29,8 +29,8 @@ fn main() -> Result<()> {
                 let (start, end) = {
                     let mut parts = range.split('-');
                     (
-                        parts.next().unwrap().parse::<usize>().unwrap(),
-                        parts.next().unwrap().parse::<usize>().unwrap(),
+                        parts.next().unwrap().parse::<usize>()?,
+                        parts.next().unwrap().parse::<usize>()?,
                     )
                 };
                 for id in start..=end {
@@ -66,8 +66,8 @@ fn main() -> Result<()> {
                 let (start, end) = {
                     let mut parts = range.split('-');
                     (
-                        parts.next().unwrap().parse::<usize>().unwrap(),
-                        parts.next().unwrap().parse::<usize>().unwrap(),
+                        parts.next().unwrap().parse::<usize>()?,
+                        parts.next().unwrap().parse::<usize>()?,
                     )
                 };
                 for id in start..=end {
